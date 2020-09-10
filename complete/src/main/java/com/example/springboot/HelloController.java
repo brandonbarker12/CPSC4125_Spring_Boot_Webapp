@@ -24,9 +24,9 @@ public class HelloController {
         return "contact";
     }
 
-    /* @GetMapping("/about")
-    public String contact(Model model){
+    @GetMapping("/about")
+    public String about(Model model){
         return "about";
-    }*/
+    }
 
 }
