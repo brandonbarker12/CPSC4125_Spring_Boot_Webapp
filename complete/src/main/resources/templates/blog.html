@@ -9,19 +9,15 @@
     <title>Hello, world!</title>
   </head>
 <body>
-  <div th:replace="fragments/header :: header(content='contact')"></div>
+  <div th:replace="fragments/header :: header(content='blog')"></div>
     
     <div class="jumbotron">
-        <h1 class="display-4">Contact Me</h1>
-        <p class="lead">Fill out the form below to contact me.</p>
+        <h1 class="display-4">Blog Message</h1>
+        <p class="lead">Fill out the form below to leave a message on the blog.</p>
         <hr class="my-4">
-        <form id="contact-form">
+        <form id="blog-form">
             <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <label for="exampleFormControlTextarea1">Blog Message</label>
                 <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
@@ -38,17 +34,15 @@
     <!-- Javascript for the submission of the form using Jquery and Ajax -->
     <script>
         //form handler
-        $("#contact-form").submit(function(event){
+        $("#blog-form").submit(function(event){
             //stop form from submitting as it normally would
             event.preventDefault();
             //default way to send data is as a JSON {"var":"value","var":"value"....}
             //get Values from the form above and assign to variable names
-            //console.log(exampleFormControlInput1.value); would print the input for email
-            //console.log(exampleFormControlTextarea1.value); would get and print the input for textarea (message)
-            var formData = {"email": exampleFormControlInput1.value, "message": exampleFormControlTextarea1.value};
+            var formData = {"message": exampleFormControlTextarea1.value};
             $.ajax({
                 type: 'POST',
-                url: '/contact',
+                url: '/blog',
                 data: JSON.stringify(formData),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -58,5 +52,6 @@
             });
         });
     </script>
+  
   </body>
 </html>
