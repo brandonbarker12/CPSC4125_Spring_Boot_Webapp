@@ -15,6 +15,10 @@
         <h1 class="display-4">Blog Message</h1>
         <p class="lead">Fill out the form below to leave a message on the blog.</p>
         <hr class="my-4">
+
+        <div id="ajaxResponse">
+        </div>
+
         <form id="blog-form">
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Blog Message</label>
@@ -45,9 +49,11 @@
                 url: '/blog',
                 data: JSON.stringify(formData),
                 contentType: "application/json; charset=utf-8",
-                dataType: "json",
                 success: function(data){
-                    console.log(data);
+                    $('#ajaxResponse').html(data)
+                },
+                error:function(e){
+                    console.log(e);
                 }
             });
         });
