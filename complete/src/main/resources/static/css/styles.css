@@ -25,11 +25,28 @@ img {
     width: 50px;
 }
 
+.nonProfitInfo {
+    padding-left: 10px;
+}
+
 
 /* Contact */
 .jumbotron #ajaxResponse{
     color: red;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+}
+
+.jumbotron #contact-form{
+    color: #C5C6C7;
 }
 
 /* Blog */
+.jumbotron #ajaxResponse{
+    color: red;
+    padding-bottom: 30px;
+}
+
+.jumbotron #blog-form{
+    color: #C5C6C7;
+}
+
