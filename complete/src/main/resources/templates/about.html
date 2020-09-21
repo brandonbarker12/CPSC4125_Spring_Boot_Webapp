@@ -6,6 +6,7 @@
 
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"  />
 
     <title>About me</title>
   </head>
@@ -13,19 +14,43 @@
   <div th:replace="fragments/header :: header(content='about')"></div>
 
     <div class="jumbotron">
-    <h1 class="display-4">About Me</h1>
-    <p class="lead">About Me</p>
-    <hr class="my-4">
+        <h1 class="display-4">About Me</h1>
+        <p class="lead">About Me</p>
+        <hr class="my-4">
 
-    <div class="media">
-    <img src="src/main/resources/static/img/IMG_5833-2.jpeg" th:src="@{img/IMG_5833-2.jpeg}" 
-    class="mr-3" alt="pfp" />
+        <div class="media">
+            <img src="src/main/resources/static/img/IMG_5833-2.jpeg" th:src="@{img/IMG_5833-2.jpeg}" 
+            class="mr-3" alt="pfp" />
 
-    <div class="media-body">
-        <h5 class="mt-0">Brandon</h5>
-        I'm 20 and I'm a computer science student at Columbus State University. My hobbies currently are playing games, drawing, and basketball.
+        <div class="media-body">
+            <h2 class="mt-0">Brandon</h2>
+            <p>I'm 20 and I'm a computer science student at Columbus State University. My hobbies currently are playing games, drawing, and basketball.</p>
+        </div>
+        </div>
     </div>
+
+
+    <div class="list-group">
+        <a href="https://www.redcross.org/donate/disaster-relief.html/?cid=generic&med=cpc&source=google&scode=RSG00000E017&gclid=CjwKCAjw-5v7BRAmEiwAJ3DpuBh-QhC4Hv_XnkyZiPHv8-8AadvKbyaD6nQHRlmetcCiQMGp9ft3FRoCTowQAvD_BwE&gclsrc=aw.ds" class="list-group-item list-group-item-action">American Red Cross</a>
+        <a href="https://www.bgca.org" class="list-group-item list-group-item-action">Boys and Gils Club of America</a>
+        <a href="https://www.worldwildlife.org" class="list-group-item list-group-item-action">World Wildlife Fund</a>
     </div>
+
+    <div class="nonProfitInfo">
+        <h3>American Red Cross</h3>
+        <p>The American Red Cross, also known as The American National Red Cross, 
+        is a humanitarian organization that provides emergency assistance, 
+        disaster relief, and disaster preparedness education in the United States.</p>
+
+        <h4>Boys and Girls Club of America</h4>
+        <p>Boys & Girls Clubs of America is a national organization of 
+        local chapters which provide voluntary after-school programs for young people.</p>
+
+        <h5>World Wildlife Fund</h5>
+        <p>The World Wide Fund for Nature is an international non-governmental 
+        organization founded in 1961 that works in the field of wilderness preservation 
+        and the reduction of human impact on the environment. It was formerly named the World Wildlife Fund, 
+        which remains its official name in Canada and the United States.</p>
     </div>
 
     

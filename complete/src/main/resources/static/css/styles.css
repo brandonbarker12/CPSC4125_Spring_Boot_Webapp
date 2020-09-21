@@ -1,3 +1,35 @@
-body{
-    color:blue;
+.jumbotron{
+    background-color: black;
 }
+
+.jumbotron > h1{
+    color: aqua;
+}
+
+.jumbotron > p {
+    color: #C5C6C7;
+}
+
+.nasaApod{
+    background-repeat: none;
+}
+
+/* About Me */
+img {
+    border-radius: 8px;
+    width: 400px;
+}
+
+.media-body{
+    color: #C5C6C7;
+    width: 50px;
+}
+
+
+/* Contact */
+.jumbotron #ajaxResponse{
+    color: red;
+    padding-bottom: 10px;
+}
+
+/* Blog */
