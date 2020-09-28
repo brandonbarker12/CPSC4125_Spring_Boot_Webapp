@@ -20,7 +20,7 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
-    <div class='nasaApod'>
+    <div class='nasaPic'>
 
     </div>
 
@@ -39,14 +39,17 @@
                 url: 'https://api.nasa.gov/planetary/apod?api_key=aQTsPLj3WTSHC79fuJjFwqZlvr8WtPRTGtN0VFCc',
                 dataType: 'json',
                 success: function(data){
-                    $('#nasaApod').css('background',"url('" + data.url + "')");
-                },
-                error: function(e){
-                    console.log(e);
-                    
-                }
-            });
-        });    
+                console.log(data);
+                        var img = '<img src="' + data.url + '" alt="NASA image of the day">';
+                        var title = '<h3>' + data.title + '</h3>';
+                        var date = '<span>' + data.date + '</span>';
+                        $('#nasaPic').html(title + date + img);
+                    },
+                    error: function(e){
+                        console.log(e);
+                    }
+                });
+        });
     </script>
   </body>
 </html>

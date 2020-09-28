@@ -10,8 +10,10 @@
     color: #C5C6C7;
 }
 
-.nasaApod{
-    background-repeat: none;
+.nasaPic{
+    margin: auto;
+    width: 50%;
+    display: block;
 }
 
 /* About Me */
